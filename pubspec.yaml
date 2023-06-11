@@ -1,0 +1,23 @@
+name: bullet_list
+description: Effortlessly create bullet lists with customizable styles and support for multiple levels of nested items.
+version: 0.0.1
+homepage: https://github.com/Othniel16/bullet-list
+
+environment:
+  sdk: '>=3.0.3 <4.0.0'
+  flutter: '>=1.17.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flextras: ^1.0.0
+  gap: ^3.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
