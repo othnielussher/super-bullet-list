@@ -1,7 +1,7 @@
-name: bullet_list
+name: super_bullet_list
 description: Effortlessly create bullet lists with customizable styles and support for multiple levels of nested items.
-version: 0.0.1
-homepage: https://github.com/Othniel16/bullet-list
+version: 0.0.2
+homepage: https://github.com/Othniel16/super-bullet-list
 
 environment:
   sdk: '>=3.0.3 <4.0.0'

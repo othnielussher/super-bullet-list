@@ -1,12 +1,12 @@
-library bullet_list;
+library super_bullet_list;
 
-import 'package:bullet_list/bullet_style.dart';
-import 'package:bullet_list/utils.dart';
+import 'package:super_bullet_list/bullet_style.dart';
+import 'package:super_bullet_list/utils.dart';
 import 'package:flextras/flextras.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-class BulletList extends StatelessWidget {
+class SuperBulletList extends StatelessWidget {
   /// List of data values.
   final List<Widget> items;
 
@@ -72,7 +72,7 @@ class BulletList extends StatelessWidget {
 
   final CrossAxisAlignment? crossAxisAlignment;
 
-  const BulletList({
+  const SuperBulletList({
     super.key,
     required this.items,
     this.isOrdered = false,

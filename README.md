@@ -1,6 +1,6 @@
 Effortlessly create bullet lists with customizable styles and support for multiple levels of nested items.
 
-![Alt Webpage.png](/assets/screenshot.png)
+![Screenshot](https://i.ibb.co/zGVKZpD/Screenshot-2023-06-11-at-3-47-00-AM.png)
 
 ## Features
 
@@ -15,7 +15,7 @@ Effortlessly create bullet lists with customizable styles and support for multip
 Import the package
 
 ```dart
-import 'package:bullet_list/bullet_list.dart';
+import 'package:super_bullet_list/super_bullet_list.dart';
 ```
 
 Add bullet list to your widget tree
@@ -28,7 +28,7 @@ Column(
         Text('Action 🔥', style: TextStyle(fontWeight: FontWeight.bold)),
         Padding(
             padding: EdgeInsets.fromLTRB(15, 15, 15, 0),
-            child: BulletList(
+            child: SuperBulletList(       // <------ here
             isOrdered: false,
             seperator: Gap(24),
             customBullet: Text('🍿'),
@@ -41,7 +41,7 @@ Column(
                         Text('John Wick'),
                         Padding(
                             padding: EdgeInsets.fromLTRB(15, 15, 15, 0),
-                                child: BulletList(
+                                child: SuperBulletList(
                                     isOrdered: true,
                                     items: [
                                         Text('John Wick (2014)'),
@@ -60,28 +60,29 @@ Column(
 ```
 
 ## Properties
-| Property          | Description |
-| --------          | ---------- |
-| crossAxisMargin   | The top margin of the marker relative to its content |
-| gap               | The space between the marker and the widget content | 
-| iconColor         | Color of the marker when using unordered lists |
-| iconSize          | Size of the marker when using unordered lists |
-| isOrdered         | Creates an ordered list if true and unordered otherwise (required)|
-| items             | List of widgets (required) |
-| separator         | The space between individual bullet points |
-| style             | The marker style. e.g. `BulletStyle.alphabets` or `BulletStyle.disc`  |
-| textStyle         | Styles the marker when using ordered lists |
 
-<br>
+| Property        | Description                                                          |
+| --------------- | -------------------------------------------------------------------- |
+| crossAxisMargin | The top margin of the marker relative to its content                 |
+| gap             | The space between the marker and the widget content                  |
+| iconColor       | Color of the marker when using unordered lists                       |
+| iconSize        | Size of the marker when using unordered lists                        |
+| isOrdered       | Creates an ordered list if true and unordered otherwise (required)   |
+| items           | List of widgets (required)                                           |
+| separator       | The space between individual bullet points                           |
+| style           | The marker style. e.g. `BulletStyle.alphabets` or `BulletStyle.disc` |
+| textStyle       | Styles the marker when using ordered lists                           |
 
-#### Nested lists
-Because everything is a widget in Flutter, you can achieve nested lists simply by passing an instance of `BulletList` as one of the child items list of any other BulletList just like this:
+## Nested lists
+
+Because everything is a widget in Flutter, you can achieve nested lists simply by passing an instance of `SuperBulletList` as one of the child items list of any other SuperBulletList just like this:
+
 ```dart
-BulletList(
+SuperBulletList(
     items: [
         SomeWidget(),
 
-        BulletList(items: []),
+        SuperBulletList(items: []),
         AnotherBulletList(items: []),
 
         SomeOtherWidget()
@@ -89,10 +90,8 @@ BulletList(
 )
 ```
 
-<br>
+## Side notes
 
-#### Side notes
-
-- When you customize the ```iconSize``` property of the widget, do make sure to scale the corresponding widget to ensure a good looking design, as the package does not automatically do that. For example, if you make ```iconSize``` 20 pixels, you might want to bump up the font size of the text to match the size of the icon.
-<br>
+- When you customize the `iconSize` property of the widget, do make sure to scale the corresponding widget to ensure a good looking design, as the package does not automatically do that. For example, if you make `iconSize` 20 pixels, you might want to bump up the font size of the text to match the size of the icon.
+  <br>
 - When you create nested lists, consider adding some padding around the nested list, to make it stand out better.
