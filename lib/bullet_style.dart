@@ -30,6 +30,15 @@ enum BulletStyle {
   /// `c.`
   alphabets,
 
+  /// Capital case alphabets of the form
+  ///
+  /// `A.`
+  ///
+  /// `B.`
+  ///
+  /// `C.`
+  capitalAlphabets,
+
   /// Lowercased alphabets of the form
   ///
   /// `(a)`
@@ -83,6 +92,15 @@ enum BulletStyle {
   ///
   /// `iii.`
   romanNumerals,
+
+  /// Roman numerals of the form
+  ///
+  /// `I.`
+  ///
+  /// `II.`
+  ///
+  /// `III.`
+  capitalRomanNumerals,
 
   /// Roman numerals of the form
   ///
