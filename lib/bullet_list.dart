@@ -44,7 +44,7 @@ class SuperBulletList extends StatelessWidget {
   ///
   /// Defults to a 16 pixel vertical space.
   /// `Gap(16.0)`
-  final Widget? seperator;
+  final Widget? separator;
 
   /// If non-null, this widget will replace the default bullet list style, or
   /// override any value which was set using [style].
@@ -79,7 +79,7 @@ class SuperBulletList extends StatelessWidget {
     this.style = BulletStyle.discFill,
     this.crossAxisMargin,
     this.gap,
-    this.seperator,
+    this.separator,
     this.customBullet,
     this.textStyle,
     this.iconSize,
@@ -91,7 +91,7 @@ class SuperBulletList extends StatelessWidget {
   Widget build(BuildContext context) {
     return SeparatedColumn(
       crossAxisAlignment: CrossAxisAlignment.start,
-      separatorBuilder: () => seperator ?? const Gap(16.0),
+      separatorBuilder: () => separator ?? const Gap(16.0),
       children: List.generate(items.length, (index) {
         return Row(
           mainAxisSize: MainAxisSize.min,
