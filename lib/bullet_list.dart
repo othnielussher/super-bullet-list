@@ -165,6 +165,11 @@ class SuperBulletList extends StatelessWidget {
             '${Utils.getAlphabetFromNumber(index + 1)}.',
             style: textStyle,
           );
+        case BulletStyle.capitalAlphabets:
+          return Text(
+            '${Utils.getCapitalAlphabetFromNumber(index + 1)}.',
+            style: textStyle,
+          );
         case BulletStyle.alphabetsBracketed:
           return Text(
             '(${Utils.getAlphabetFromNumber(index + 1)})',
@@ -186,6 +191,11 @@ class SuperBulletList extends StatelessWidget {
         case BulletStyle.romanNumerals:
           return Text(
             '${Utils.getRomanNumeralFromNumber(index + 1)}.',
+            style: textStyle,
+          );
+        case BulletStyle.capitalRomanNumerals:
+          return Text(
+            '${Utils.getCapitalRomanNumeralFromNumber(index + 1)}.',
             style: textStyle,
           );
         case BulletStyle.romanNumeralsBracketed:
