@@ -1,6 +1,6 @@
 name: super_bullet_list
 description: Effortlessly create bullet lists with customizable styles and support for multiple levels of nested items.
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/othnielussher/super-bullet-list
 
 environment:
